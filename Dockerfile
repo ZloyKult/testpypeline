@@ -1,3 +1,3 @@
 FROM nginx:latest
 MAINTAINER dfedulov
-CMD ["nginx" "-d"]
+CMD ["/entrypoint.sh"]
