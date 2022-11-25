@@ -29,3 +29,10 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/clockbox:latest
+      -
+        name: telegram Notification
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAR_ID }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          args: Testing telegram notification
